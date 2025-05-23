@@ -1,12 +1,35 @@
-# **Domain**
+# **Domain WHOIS Lookup Tool**
+
+This Python-based tool allows you to fetch WHOIS information for any domain entered by the user. It uses the built-in `socket` module to communicate with WHOIS servers and returns detailed domain registration data.
+
 This code is a Python program that uses sockets to query the whois information of any domain name entered by the user. Here is a line-by-line explanation of what the code does:
 - The first line imports the socket module, which provides access to the low-level network interface in Python.
 - The second line asks the user to enter a domain name, such as [python.org](https://www.python.org/), and converts it to lowercase.
-  
-![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)
 
+![Python Versions](https://img.shields.io/badge/Python-3.6%20→%203.9-blueviolet?style=for-the-badge&logo=python&logoColor=white) ![Python](https://img.shields.io/badge/Python%20Versions-3.6%20🚀%203.7%20✨%203.8%20🔥%203.9-%23007ec6?style=for-the-badge&logo=python&logoColor=white) ![Domain](https://img.shields.io/badge/Domain-example.com-ff69b4?style=for-the-badge&logo=internet-explorer&logoColor=white) [![Linux](https://img.shields.io/badge/Linux-Powered%20by%20Linux-yellow?style=for-the-badge&logo=linux&logoColor=white)](https://www.kernel.org)
+
+  ![generate a small image of Python logo for GitHub](https://github.com/user-attachments/assets/20d1cc2a-3a3a-4ed9-a916-7c40b35e1d43)
+
+## Features
+
+- Retrieves WHOIS information for any given domain.
+- Utilizes the Python `socket` module for server communication.
+- Easy-to-read and understand output.
+- Simple and clear source code.
+
+## Tags
+
+- whois
+- domain-lookup
+- python
+- networking
+- cybersecurity
+---
+
+Feel free to contribute or report any issues. Contributions are welcome to improve the tool's functionality or expand its features.
 
 ## **Cleaning the domain name**
+
 ```python
 import socket
 
@@ -57,10 +80,32 @@ whois_servers = {
 - The next line prints the `msg` string to the standard output, which is the console by default. The `msg` string contains the whois information of the domain name, such as the registrant, the registrar, the creation date, the expiration date,      the name servers, and other details.
 - The first line in the except block prints the `socket.error` exception to the standard output, which contains the error message and the error code of the socket error.
 
+   ## Requirements
+
+- Python 3.x
+
+   This script uses only built-in Python modules and does not require additional dependencies.
+
+
    ## **Installation in Windows**
 - A prerequisite for working with a domain is to install whois.
 
   https://learn.microsoft.com/en-us/sysinternals/downloads/whois
+
+   ## Usage
+
+- Run the tool using
+
+  ```bash
+  python3 Domain.py
+  ```
+  Then input your target domain when prompted.
+
+  ```bash
+  Domain : example.com
+  ```
+
+  The tool will connect to a WHOIS server and return detailed information about the domain.
   
    ## **Installation on Linux**
   
@@ -91,7 +136,7 @@ $ whois 2404:6800:4007:817::200e
 ```
 - Sample outputs.
 
-```console
+```bash
 % [whois.apnic.net]
 % Whois data copyright terms http://www.apnic.net/db/dbcopyright.html
  
@@ -132,6 +177,7 @@ source:         APNIC
 % This query was served by the APNIC Whois Service version 1.88.15-SNAPSHOT (WHOIS-JP3)
 ```
 - Then you can also do the domain name lookup. For instance.
+
 ```console
 $ whois domain-name-here
 $ whois cyberciti.biz
@@ -202,4 +248,22 @@ $ whois -b <IPv6-here>
 $ whois -b 8.8.4.4
 ```
 
-   ## **Stay in touch with us💬**
+## Demo
+
+  A sample output might look like this:
+
+```text
+Domain Name: EXAMPLE.COM
+Registrar: Example Registrar, Inc.
+Updated Date: 2024-01-10T00:00:00Z
+Creation Date: 1995-01-10T00:00:00Z
+Registry Expiry Date: 2026-01-09T00:00:00Z
+```
+
+## License
+
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for more information.
+
+## **Stay in touch with us💬**
+
+**-...-** 
